@@ -1,0 +1,24 @@
+Anotações do curso:
+
+Anotação 1: 
+<img [src]="url" [alt]="title">
+com o [] o angular irá saber que terá que buscar o valor do component.ts
+One way data binding 
+
+<h1> {{ title }}</h1> 
+usado no caso do data binding de um atributo html, usar quando for exebido um valor em uma tag, 
+isoladamente. 
+Ou seja, Utilizamos {{ }} dentro de tags e [ ] para atributos
+
+
+Anotação 2:
+Instalar bootstrap através do npm (npm install bootstrap 4.1.1)
+no angular.json, na chave build, dentro do styles, adicionar o caminho do boostrap dentro da node_modules/dist
+
+
+Anotação 3:
+Todo component, vai precisar informar o nome do selector, sempre colocar uma abreviação na frente
+exemplo: ap-phoho (aluraPic), caso por padrão o Angular criar o component photo, isso seria um problema,
+porém como está utilizando a abreviação, não teremos problema.
+
+
