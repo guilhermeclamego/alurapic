@@ -29,3 +29,11 @@ e para injeção de dependência no construtor na classe:
   constructor(http: HttpClient){
     console.log(http);
   }
+
+
+Anotação 5:
+photo.service.ts serviço genérico para consumir as fotos da API.
+o @Injectable({providedIn: 'root'}) com escopo raiz, qualquer component da aplicação que precisar, terá disponivel.
+Por isso o providedIn: 'root'.
+Já anotação @Injectable, sem ela dará erro, pois como é uma injeção de dependência (chamada o http) é necessário
+colocar a anotação.
