@@ -37,3 +37,7 @@ o @Injectable({providedIn: 'root'}) com escopo raiz, qualquer component da aplic
 Por isso o providedIn: 'root'.
 Já anotação @Injectable, sem ela dará erro, pois como é uma injeção de dependência (chamada o http) é necessário
 colocar a anotação.
+
+Anotação 6:
+Criado interface photo.ts onde foi definido todos os nome do retorno da API e qual o tipo dos dados,
+assim, terá o autocomplete e menos erros.
