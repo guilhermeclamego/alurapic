@@ -53,3 +53,7 @@ Explição para o private na classe photo.component.ts
 private e o this, para ser possível ouvir o http dentro da função, 
 sem isso, o http só seria ouvido direto do construtor apenas
 Isso é um exemplo, está espalhado pelo código e poderá ser usado a qualquer momento em qualquer classe.
+
+Anotação 8:
+Boa pratica necessária:
+Todo module, importar CommonModule. 
