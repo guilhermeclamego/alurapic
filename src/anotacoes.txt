@@ -21,4 +21,11 @@ Todo component, vai precisar informar o nome do selector, sempre colocar uma abr
 exemplo: ap-phoho (aluraPic), caso por padrão o Angular criar o component photo, isso seria um problema,
 porém como está utilizando a abreviação, não teremos problema.
 
-
+Anotação 4:
+Para trabalhar com consumos de API, o angular tem modulo nativo, que é o HttpClient.
+Para utilizar é necessário importar no app.module.ts 
+HttpClientModule no imports e import { HttpClientModule } from '@angular/common/http';
+e para injeção de dependência no construtor na classe:
+  constructor(http: HttpClient){
+    console.log(http);
+  }
