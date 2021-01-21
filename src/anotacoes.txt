@@ -41,3 +41,15 @@ colocar a anotação.
 Anotação 6:
 Criado interface photo.ts onde foi definido todos os nome do retorno da API e qual o tipo dos dados,
 assim, terá o autocomplete e menos erros.
+
+
+Anotação 7:
+Explição para o private na classe photo.component.ts
+ constructor(private http: HttpClient){} 
+    listFromUser(userName: string){
+        return this.http.get<Photo[]>(`${API}/${userName}/photos`);
+    }
+    
+private e o this, para ser possível ouvir o http dentro da função, 
+sem isso, o http só seria ouvido direto do construtor apenas
+Isso é um exemplo, está espalhado pelo código e poderá ser usado a qualquer momento em qualquer classe.
