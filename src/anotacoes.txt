@@ -91,3 +91,9 @@ Sendo que, o filterByDescription foi criado filterByDescription.pipe.ts. O Angul
 exclusiva para criação do pipe, lembrando que é necessário utilizar o decorador @pipe.
 Lembrar também, que tem a interface PipeTransform para utilizar. 
 No module o pipe também precisa ser declarado
+
+
+Anotação 13:
+Existe também a criação do resolver (photo-list.resolver.ts).
+ O Angular, por meio do Resolver, capaz de lidar com dados durante a navegação de uma rota para d
+ isponibilizá-los a um componente antes deste ser carregado
