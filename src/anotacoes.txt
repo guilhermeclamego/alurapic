@@ -56,4 +56,10 @@ Isso é um exemplo, está espalhado pelo código e poderá ser usado a qualquer 
 
 Anotação 8:
 Boa pratica necessária:
-Todo module, importar CommonModule. 
+Todo module, importar CommonModule.
+
+Anotação 9:
+Na rotas, quando for passado uma URL inexistente tratar da seguinte maneira no app.routing.module.ts
+no caso do projeto, na const routes que é um array de Routes, adicionar:
+{ path: '**', component: NotFoundComponent }
+Ou seja, o caminho (path) não encontrado ('**'), irá chamar o component criado NotFoundComponent
