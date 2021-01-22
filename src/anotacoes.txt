@@ -63,3 +63,24 @@ Na rotas, quando for passado uma URL inexistente tratar da seguinte maneira no a
 no caso do projeto, na const routes que é um array de Routes, adicionar:
 { path: '**', component: NotFoundComponent }
 Ou seja, o caminho (path) não encontrado ('**'), irá chamar o component criado NotFoundComponent
+
+Anotação 10:
+Foi criado o componente photos dentro de photo-list, para isolar o comportamente da regra de 
+carregando das fotos, como tem uma alta acoplação com photos list, foi criado dentro do mesmo lugar.
+
+Anotação 11:
+no componente photo-list.component.html 
+o (keyup)="filter = $event.target.value" é a mesma que coisa que no javascript puro:
+elemento.addEventListener('keyup', (event) => event.target.value)
+Observação importante:
+(keyup) o () é para indiciar que é um EventBind, ou seja, para o evento keyup, irá avaliar a expressão,
+diferente do [] que indica DataBind, que recebe um dado definito pelo componente. Resumindo
+[] = O evento é disparado dado vem do componente para o template, nunca o contrário 
+() = O evento é disparado vai do template para o componente, nunca o contrário
+Ambos são unidiricionais. 
+
+Anotação 12:
+exemplo:
+no component.ts terá nome = 'guilherme'
+no component.html quero fazer um pipe (tubo) para colocar em maiusculo, ficará:
+{{ nome | uppercase}}
