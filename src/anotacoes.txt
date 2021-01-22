@@ -84,3 +84,10 @@ exemplo:
 no component.ts terá nome = 'guilherme'
 no component.html quero fazer um pipe (tubo) para colocar em maiusculo, ficará:
 {{ nome | uppercase}}
+no photo-list.component.html tem um filtro
+<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
+ou seja, irá pegar as photos | (transformar) filtrando pela descrição e aplicando o filtro
+Sendo que, o filterByDescription foi criado filterByDescription.pipe.ts. O Angular tem a propriedade
+exclusiva para criação do pipe, lembrando que é necessário utilizar o decorador @pipe.
+Lembrar também, que tem a interface PipeTransform para utilizar. 
+No module o pipe também precisa ser declarado
