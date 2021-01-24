@@ -97,3 +97,9 @@ Anotação 13:
 Existe também a criação do resolver (photo-list.resolver.ts).
  O Angular, por meio do Resolver, capaz de lidar com dados durante a navegação de uma rota para d
  isponibilizá-los a um componente antes deste ser carregado
+
+
+ Anotação 14:
+ No photo-list.component.ts, foi utilizado um debounce, usando componente do rxjs para os milisegundos.
+ Foi implementado a interface OnDestroy, isso é muito importante, para não ficar ocupando memoria 
+ desnecessaria.
