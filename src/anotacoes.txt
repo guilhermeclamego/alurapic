@@ -145,3 +145,8 @@ Anotação 19:
 No singin.component.html o botão tem o data binding [disabled]="loginForm.invalid"
 sendo que o loginForm.invalid já irá identificar se tem algum erro (conforme anotação 18, não for digitado
 login ou senha) irá ficar bloqueado, caso os 2 campos estiveram digitados (sem erro) irá liberar.
+
+Anotação 20:
+ng g s core/auth criado core service de autenticação, login, filtros e componentes que são o core do
+sistema, ficarão separados, tendo no service, a injeção com providedIn root, para ser usado em todo 
+sistema.
