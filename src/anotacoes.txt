@@ -113,3 +113,20 @@ Existe também a criação do resolver (photo-list.resolver.ts).
   <p class="text-center text-muted">No more data to load</p>
 </ng-template>
 #messageTemplate indica o nome da variavel dada ao ng-template
+
+
+Anotação 16:
+É possível criar diretivas, conforme o dark-on-hover.directive.ts
+que nada mais é, do que um componente css com hover. Porém, como vai ser utilizado em vários componentes
+foi criado um component especifico para isso, com a diretiva, assim, poderá ser usado por todo o sistema
+e em caso de manutenção, altera-se apenas em um lugar.
+E o selector dela está entre [] para ser usado direto como atributo dentro do elemento, diretivas 
+como esse caso, seguem esse padrão.
+
+
+Anotação 17:
+No dark-on-hover.directive.ts 
+Terá a @HostListener('mouseover')
+O @HostListener fica "escutando" o evento, no caso 'mousever' ou seja,
+quando for passado o mouse em cima será chamado a função (darkenOn), mesma coisa para o 'mouseleave' (darkenOff)
+
