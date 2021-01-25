@@ -130,3 +130,18 @@ Terá a @HostListener('mouseover')
 O @HostListener fica "escutando" o evento, no caso 'mousever' ou seja,
 quando for passado o mouse em cima será chamado a função (darkenOn), mesma coisa para o 'mouseleave' (darkenOff)
 
+Anotação 18:
+No singin.component.ts foi utilizado formerBuilder.group, o campo userName e password
+recebe um array, com 2 posições, primeira posição valor, segunda validação.
+Assim, pegando/validando o valor do component.html, esse que por sua vez,
+tem a propriedade small, onde verificar se foi digitado ou não, pois é obrigatório.
+*ngIf="loginForm.get('password').errors?.required"  essa condicação faz a verificação
+sendo o erros?, verifica se existe erros irá chamar o required, caso contrário não, pois sem o ?
+irá chamar dentro, mas errors no caso poderá ser undifined e dara erro ao acessar a propriedade required de 
+undifined.
+
+
+Anotação 19:
+No singin.component.html o botão tem o data binding [disabled]="loginForm.invalid"
+sendo que o loginForm.invalid já irá identificar se tem algum erro (conforme anotação 18, não for digitado
+login ou senha) irá ficar bloqueado, caso os 2 campos estiveram digitados (sem erro) irá liberar.
