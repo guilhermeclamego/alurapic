@@ -103,3 +103,13 @@ Existe também a criação do resolver (photo-list.resolver.ts).
  No photo-list.component.ts, foi utilizado um debounce, usando componente do rxjs para os milisegundos.
  Foi implementado a interface OnDestroy, isso é muito importante, para não ficar ocupando memoria 
  desnecessaria.
+
+ Anotação 15:
+ No load-button.component.html tem a utilização de if else no template
+ <div class="text-center" *ngIf="hasMore; else messageTemplate">
+ isso está sendo feito, para caso ouver dados, mostrar o botão se não o messageTemplate 
+ que é:
+ <ng-template #messageTemplate>
+  <p class="text-center text-muted">No more data to load</p>
+</ng-template>
+#messageTemplate indica o nome da variavel dada ao ng-template
