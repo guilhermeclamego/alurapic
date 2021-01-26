@@ -162,4 +162,12 @@ Nessa classe também {observe: 'response'}, ou seja, é para conseguir ter acess
  Anotação 22:
 NO user.service.ts foi utilizado BehaviorSubject, que basicamente é o seguinte:
 Após a emissão de um valor, caso este não seja consumido ou escutado, o BehaviorSubject o manterá armazenado. 
-E se alguém faz o subscribe depois, terá acesso ao último valor emitido. 
+E se alguém faz o subscribe depois, terá acesso ao último valor emitido.
+
+Anotação 23:
+header.component.html foi utilizado um pipe async, explicação:
+Quando lidamos com o Observable e aplicamos o Async pipe no template, o Angular terá acesso à sua inscrição 
+realizada, como se o template fizesse o subscribe(), acessasse o valor e nos entregasse. 
+Tratamos o user$ como user para que não precisemos modificar o template para nenhum outro local. 
+Esta é mais uma vantagem no uso do Angular, 
+para obtermos o valor de um Observable e sua emissão por meio do Async pipe.
