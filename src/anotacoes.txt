@@ -150,3 +150,11 @@ Anotação 20:
 ng g s core/auth criado core service de autenticação, login, filtros e componentes que são o core do
 sistema, ficarão separados, tendo no service, a injeção com providedIn root, para ser usado em todo 
 sistema.
+
+
+Anotação 21:
+No auth.service.ts é utilizado operator tap do rxjs, esse operator é utilizado no pipe , no caso, irá 
+fazer o pipe para pegar o acess-token, para quando fazer o subscribe na chama da função, o serviço de pegar
+e armazenar o token, conforme a resposta da requisição, fica por conta do auth.service.ts
+Nessa classe também {observe: 'response'}, ou seja, é para conseguir ter acesso aos headers do
+ res.headers.get('x-acess-token'); , sem isso,o headers ficara com erro
