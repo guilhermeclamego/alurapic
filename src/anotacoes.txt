@@ -158,3 +158,8 @@ fazer o pipe para pegar o acess-token, para quando fazer o subscribe na chama da
 e armazenar o token, conforme a resposta da requisição, fica por conta do auth.service.ts
 Nessa classe também {observe: 'response'}, ou seja, é para conseguir ter acesso aos headers do
  res.headers.get('x-acess-token'); , sem isso,o headers ficara com erro
+
+ Anotação 22:
+NO user.service.ts foi utilizado BehaviorSubject, que basicamente é o seguinte:
+Após a emissão de um valor, caso este não seja consumido ou escutado, o BehaviorSubject o manterá armazenado. 
+E se alguém faz o subscribe depois, terá acesso ao último valor emitido. 
