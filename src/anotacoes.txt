@@ -181,3 +181,7 @@ seria recarregada sempre. Com o routerLink isso não acontece e o cenário é o 
 Anotação 25:
 signup.component.ts, tem varias validações de formulário, utilizando o Validators do Angular. 
 signup.component.html, com o ap-message é possível ver a forma das validações integrando com o component.ts
+o lower-case.validator.ts dentro de shared/validators é apenas para fim didatico, dentro do Validators do
+angular já existe a validação feita, porém, para estudo foi criado essa.
+Obs: todo validator recebe control: AbstractControl de parâmetro de entrada e todos exportam uma function ou
+uma classe com método
