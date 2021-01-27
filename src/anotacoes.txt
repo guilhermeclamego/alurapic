@@ -197,3 +197,12 @@ Anotação 27:
 Exemplo para pegar todos os campos do formulário, conforme no signup.component.ts
 const newUser = this.signupForm.getRawValue(); no método sigup() 
 que utiliza a interface new-user.ts para ficar mais fácil o controle.
+
+Anotação 28:
+No app.routing.module.ts o primeiro path, é possível ver 'children' isso foi feito para 
+carregar a imagem (home.component) e essa mesma imagem será usada no singin ('') e no signup
+
+Anotação 29:
+Buld do projeto:
+ng build --prod -> O Angular irá aplicar um monte de técnicas de otimização, (minimizar css, remover cometários,
+etc...), dentro da pasta do projeto, será gerado uma pasta 'dist' que é o projeto que será colocado no servidor.
