@@ -177,3 +177,7 @@ header.component.html foi usado a propriedade
 <a [routerLink]="['']">Please, login!</a>
 se utilizado a ancora, direto com href para a pagina inicial(login), toda vez que fosse clicado a aplicação
 seria recarregada sempre. Com o routerLink isso não acontece e o cenário é o mesmo. 
+
+Anotação 25:
+signup.component.ts, tem varias validações de formulário, utilizando o Validators do Angular. 
+signup.component.html, com o ap-message é possível ver a forma das validações integrando com o component.ts
