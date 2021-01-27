@@ -193,3 +193,7 @@ segunda posição: validação sincronas
 terceira posição: validações asincronas
 conforme visto no campo userName do component mencionado.
 
+Anotação 27:
+Exemplo para pegar todos os campos do formulário, conforme no signup.component.ts
+const newUser = this.signupForm.getRawValue(); no método sigup() 
+que utiliza a interface new-user.ts para ficar mais fácil o controle.
