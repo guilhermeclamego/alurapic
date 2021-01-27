@@ -171,3 +171,9 @@ realizada, como se o template fizesse o subscribe(), acessasse o valor e nos ent
 Tratamos o user$ como user para que não precisemos modificar o template para nenhum outro local. 
 Esta é mais uma vantagem no uso do Angular, 
 para obtermos o valor de um Observable e sua emissão por meio do Async pipe.
+
+Anotação 24:
+header.component.html foi usado a propriedade 
+<a [routerLink]="['']">Please, login!</a>
+se utilizado a ancora, direto com href para a pagina inicial(login), toda vez que fosse clicado a aplicação
+seria recarregada sempre. Com o routerLink isso não acontece e o cenário é o mesmo. 
