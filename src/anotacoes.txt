@@ -185,3 +185,11 @@ o lower-case.validator.ts dentro de shared/validators é apenas para fim didatic
 angular já existe a validação feita, porém, para estudo foi criado essa.
 Obs: todo validator recebe control: AbstractControl de parâmetro de entrada e todos exportam uma function ou
 uma classe com método
+
+Anotação 26:
+no signup.component.ts tem as validações do formulário, sempre segue a regra:
+primeira posição, valor
+segunda posição: validação sincronas
+terceira posição: validações asincronas
+conforme visto no campo userName do component mencionado.
+
