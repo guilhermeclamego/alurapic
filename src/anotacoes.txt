@@ -206,3 +206,29 @@ Anotação 29:
 Buld do projeto:
 ng build --prod -> O Angular irá aplicar um monte de técnicas de otimização, (minimizar css, remover cometários,
 etc...), dentro da pasta do projeto, será gerado uma pasta 'dist' que é o projeto que será colocado no servidor.
+
+Anotação 30:
+no app.routing.module.ts ao adicionar o parâmetro
+{ useHash: true } no import do NgModule  imports: [ RouterModule.forRoot(routes, { useHash: true }) ] 
+Assim, quando a página principal da aplicação é carregada, o # é colocado automaticamente. 
+Antes do History API, se alterássemos a barra de endereços do navegador, a location inevitavelmente seria 
+modificada, e o back end seria acessado, executando-se a requisição. Sabemos que isso não pode ser feito, 
+e que esta mudança é apenas para efeito de rotas, para que o Angular detecte qual componente deve ser 
+carregado. Uma vez que o hash não dispara o carregamento na mudança do location, no back end, o Angular o 
+intercepta e extrai a informação, um processo bem comum
+
+
+Anotação 31:
+Lazy Loading:
+Foi criado o home.routing.module.ts para organizar as rotas e com isso, o carregamento da aplicação
+ser feito apenas o que precisa ser carregado e não ela inteira de uma vez. 
+*Observação muito importante no arquivo de rotas: *
+imports no NgModule desses modulos o principal (app.routing.module.ts) será 
+RouterModule.forRoot
+e os filhos SEMPRE 
+RouterModule.forChild
+Também, o modulo que aplicado a rota separada não poderá ser importado no app.module.ts
+no caso do projeto, foi removido o HomeModule dos imports do app.module.ts
+com o Lazy Loading o build também será separado, com o módulo que será carregado sobre demanda e 
+o modulo principal, em uma grande aplicação, é uma pratica necessária a quebra de rotas.
+
