@@ -235,3 +235,18 @@ o modulo principal, em uma grande aplicação, é uma pratica necessária a queb
 Anotação 32:
 No photo.service.ts no método upload, foi utilizado o formData, com append, apenas porque tem um arquivo 
 para ser enviado. 
+
+Anotação 33:
+photo-form-component.html, criado uma imagem(botão) para upload da foto,
+nesse caso, foi dado hidden no input, e colocado uma variavel de template (#fileInput)
+e ao clicar na imagem, existe um event bind para a variavel de template, com o evento de click
+(click)="fileInput.click()"
+
+Anotaçao 34:
+Exemplo sobre o ngIf/else:
+<div *ngIf="show; else message">
+          Welcome
+        </div>
+        <ng-template #message>
+          Error!
+        </ng-template>
