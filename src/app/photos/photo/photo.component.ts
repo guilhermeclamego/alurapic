@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { NOMEM } from 'dns';
 
-const CLOUD = 'http://localhost:3000/img/'
+const CLOUD = 'http://localhost:3000/imgs/'
 @Component({
     selector: 'ap-photo',
     templateUrl: 'photo.component.html'
