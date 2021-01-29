@@ -232,3 +232,6 @@ no caso do projeto, foi removido o HomeModule dos imports do app.module.ts
 com o Lazy Loading o build também será separado, com o módulo que será carregado sobre demanda e 
 o modulo principal, em uma grande aplicação, é uma pratica necessária a quebra de rotas.
 
+Anotação 32:
+No photo.service.ts no método upload, foi utilizado o formData, com append, apenas porque tem um arquivo 
+para ser enviado. 
