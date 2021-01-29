@@ -250,3 +250,12 @@ Exemplo sobre o ngIf/else:
         <ng-template #message>
           Error!
         </ng-template>
+
+Anotação 35:
+Exemplo de segmento de rota com parâmetro generico, no caso photoid para acessar 
+http://localhost:4200/#/p/photo.id
+a [routerLink]="['/p', photo.id]">
+E a /p a barra é voltar a rota inicial, se não jogaria assim:
+http://localhost:4200/#/userName/p/photo.id ficando errado a url, é necessário voltar pra ficar asssim
+http://localhost:4200/#/p/photo.id
+e essa é a função da barra nesse caso.
