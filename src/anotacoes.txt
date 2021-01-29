@@ -259,3 +259,20 @@ E a /p a barra é voltar a rota inicial, se não jogaria assim:
 http://localhost:4200/#/userName/p/photo.id ficando errado a url, é necessário voltar pra ficar asssim
 http://localhost:4200/#/p/photo.id
 e essa é a função da barra nesse caso.
+
+
+Anotação 36:
+Ao adicionar um comentário, estava sendo necessário atualizar a página para mostrar o comtentário recém 
+adicionado. Isso, pq o array de comentarios não estava sendo atualizado após a adição, como solução
+foi utilizado o rxjs, função chamada switchMap, que ficou da seguinte maneira, conforme no 
+photo-comments.component.ts:
+this.comments$ = this.photoService
+            .addComment(this.photoId, comment)
+            .pipe(switchMap(() => this.photoService.getComments(this.photoId)))
+            .pipe(tap(() => {
+                this.commentForm.reset();
+                alert('Comentário adicionado com sucesso');
+            }))
+o pipe, com o switchMap, pegar os comentários, assim, quando o subscribe for feito e resetado o form
+já terá todos os comentários. Ou seja, sai de Observable, vai para o outro e volta.
+E o tap é, antes de retornar para o Observable, reseta o formulário, (apenas um tapinha, hehe)
