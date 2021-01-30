@@ -44,4 +44,8 @@ export class PhotoService {
             {commentText}
         );
     }
+
+    removePhoto(photoId: number){
+        //TODO: efetuar req para delete
+    }
 }
