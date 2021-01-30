@@ -45,7 +45,7 @@ export class PhotoService {
         );
     }
 
-    removePhoto(photoId: number){
-        //TODO: efetuar req para delete
+    removePhoto(photoId: number) {
+        return this.http.delete(API + '/photos/' + photoId);
     }
 }
