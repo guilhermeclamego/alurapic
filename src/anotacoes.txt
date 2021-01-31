@@ -276,3 +276,28 @@ this.comments$ = this.photoService
 o pipe, com o switchMap, pegar os comentários, assim, quando o subscribe for feito e resetado o form
 já terá todos os comentários. Ou seja, sai de Observable, vai para o outro e volta.
 E o tap é, antes de retornar para o Observable, reseta o formulário, (apenas um tapinha, hehe)
+
+Anotação 37:
+{ observe: 'response'} no método like do photo.service.ts
+ para ter acesso ao status da resposta, precisaremos passar um terceiro parâmetro: observe: 'response'
+ Ou seja, sempre que é necessário ter acesso aos parâmetros da requisição, será necessario passar
+ esse parâmetro
+
+ Anotação 38:
+ No photo.service.ts
+ like(photoId: number) {
+        return this.http.post(
+            API + '/photos/' + photoId + '/like', {}, { observe: 'response'}
+        )
+        .pipe(map(res => true))
+        .pipe(catchError(err => {
+            return err.status == '304' ? of(false) : throwError(err);
+        }))
+
+    }
+o pipe com o catchError é do rxjs/operators
+e o 'of' é do rxjs que retorna um Observable
+Se acontecer um erro 304, devemos retornar um observable do tipo boolean com valor falso. 
+Então precisaremos realizar algumas alterações. Faremos um pipe() utilizando o catchError(). 
+Então faremos um teste para descobrir se ele é do tipo 304, caso sim, retornaremos o observable 
+com valor false. Para tanto, importaremos um operador RxJS of().
