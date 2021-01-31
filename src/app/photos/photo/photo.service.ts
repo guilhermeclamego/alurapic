@@ -5,8 +5,10 @@ import { of, throwError } from 'rxjs';
 
 import { Photo } from './photo';
 import { PhotoComment } from './photo-comment';
+import { environment } from 'src/environments/environment';
 
-const API = 'http://localhost:3000'
+//const API = 'http://localhost:3000'
+const API = environment.ApiUrl;
 
 @Injectable({providedIn: 'root'}) //escopo raiz, qualquer component da aplicação que precisar, terá disponivel
 export class PhotoService {

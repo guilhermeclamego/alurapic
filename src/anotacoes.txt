@@ -301,3 +301,19 @@ Se acontecer um erro 304, devemos retornar um observable do tipo boolean com val
 Então precisaremos realizar algumas alterações. Faremos um pipe() utilizando o catchError(). 
 Então faremos um teste para descobrir se ele é do tipo 304, caso sim, retornaremos o observable 
 com valor false. Para tanto, importaremos um operador RxJS of().
+
+Anotação 39:
+Deploy da aplicação em teste e produção
+Teremos a pasta "enviroments", que abriga os arquivos enviroments.prod.ts e enviroment.ts. 
+Quando executamos o comando ng build --prod, é implícito que deve ser usada uma variável de 
+ambiente para o ambiente de produção.
+Nesses ambientes, podemos colocar a URL da API, de produoção e de dev. 
+Assim, é possível importar o enviroment e nos services que usam a API_URL, chamar a URL que está ali.
+Exemplo no photo.service.ts
+import { enviroment } from '../../../enviroments/enviroment';
+
+//const API = 'http://localhost:3000'
+const API = enviroment.ApiUrl;
+
+Resumindo: Build em Prod essa url dinamica vai pegar o environment.prod.ts de PROD conforme variavel de ambiente
+e em dev vai pegar o environment.ts
