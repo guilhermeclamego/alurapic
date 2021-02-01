@@ -340,3 +340,10 @@ calculando a barra de progesso.
 Anotação 41:
 Operador finalize do Rxjs:
 Garante que um trecho de código seja executado tanto após o sucesso ou fracasso da operação.
+
+Anotação 42:
+<div [ngClass]="{ 'active-menu': isShown}"> no menu.component.html
+Aplica a classe de acordo com estado do componente, isso é muito utilizado para carregar css dinamico,
+como utilizado no menu da aplicação. 
+No caso o isShown é um boolean que está sendo controlado pelo menu.component.ts, conforme o método. 
+(click)="toggle()"
