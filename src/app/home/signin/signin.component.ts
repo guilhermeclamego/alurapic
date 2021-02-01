@@ -3,7 +3,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../core/auth/auth.service';
 import { Router } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
-
 @Component({
     templateUrl: './signin.component.html'
 })
@@ -16,9 +15,11 @@ export class SignInComponent implements OnInit {
         private formBuilder: FormBuilder,
         private authService: AuthService,
         private router: Router,
-        private platformDetectorService: PlatformDetectorService) { }
+        private platformDetectorService: PlatformDetectorService
+    ) { }
 
     ngOnInit(): void {
+        
         this.loginForm = this.formBuilder.group({
             //primeira posição valor, segunda validação
             userName: ['', Validators.required],

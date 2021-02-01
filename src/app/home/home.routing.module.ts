@@ -6,7 +6,6 @@ import { HomeComponent } from './home.component';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './signup/signup.component';
 
-
 const routes: Routes = [
     { 
         path: '', 
@@ -15,11 +14,17 @@ const routes: Routes = [
         children: [
             { 
                 path: '', 
-                component: SignInComponent
+                component: SignInComponent,
+                data: {
+                    title: 'Sign in'
+                }
             },
             {
                 path: 'signup',
-                component: SignUpComponent
+                component: SignUpComponent,
+                data: {
+                    title: 'Sign up'
+                }
             },
         ]
     }
