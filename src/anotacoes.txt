@@ -333,3 +333,6 @@ return this.http.post(
         );  
 Ou seja, foi passado API, os Dados da requisição e o ultimo parâmetro um objeto com 
 para observar os eventos e reportar o progesso. 
+E o photo-form-component.ts foi alterado para trabalhar com o progesso. No subscribe do observable
+(event: HttpEvent<any>) recebe esse parametro, e o restante do método tem toda a regra para essa chamada,
+calculando a barra de progesso. 
