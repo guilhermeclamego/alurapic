@@ -317,3 +317,19 @@ const API = enviroment.ApiUrl;
 
 Resumindo: Build em Prod essa url dinamica vai pegar o environment.prod.ts de PROD conforme variavel de ambiente
 e em dev vai pegar o environment.ts
+
+Anotação 40:
+Barra de progesso, exemplo utilizado no upload da foto.
+Ao fazer a upload, pelo photo.service.ts é feito um http post, nesse post, 
+é possível passar parâmetros que trabalhar com o progesso, Angular ja tem isso no http.
+exemplo:
+return this.http.post(
+            API + '/photos/upload', 
+            formData,
+            {
+                observe: 'events',
+                reportProgress: true
+            }
+        );  
+Ou seja, foi passado API, os Dados da requisição e o ultimo parâmetro um objeto com 
+para observar os eventos e reportar o progesso. 
