@@ -336,3 +336,7 @@ para observar os eventos e reportar o progesso.
 E o photo-form-component.ts foi alterado para trabalhar com o progesso. No subscribe do observable
 (event: HttpEvent<any>) recebe esse parametro, e o restante do método tem toda a regra para essa chamada,
 calculando a barra de progesso. 
+
+Anotação 41:
+Operador finalize do Rxjs:
+Garante que um trecho de código seja executado tanto após o sucesso ou fracasso da operação.
