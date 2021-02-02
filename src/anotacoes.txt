@@ -373,3 +373,12 @@ e para isso foi criado um providers dentro do erros.module.ts
 Anotação 45:
   server-log.services.ts é o envio dos logs de erro para um servidor, este servidor apenas de teste
   para estudo da aplicação.
+
+Anotação 46:
+  {
+            validator: userNamePasswordValidator;
+  }
+Dentro do singup.component.ts foi adicionado essa validação, 
+ela irá validar se o userName está igual ao password, apenas para mostrar como criar as proprias
+validações de formulários, chamando um método.
+no username-password.validator.ts é possível verificar a classe da validação, é diferente das demais 
