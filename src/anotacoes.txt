@@ -369,3 +369,7 @@ e para isso foi criado um providers dentro do erros.module.ts
   ]
   fazendo um de-para, ou seja, quando ativar o ErrorHandler, não usará mais o padrão do Angular, 
   mas sim o GlobalErrorHandler criado no projeto
+
+Anotação 45:
+  server-log.services.ts é o envio dos logs de erro para um servidor, este servidor apenas de teste
+  para estudo da aplicação.
