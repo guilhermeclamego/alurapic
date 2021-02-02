@@ -382,3 +382,4 @@ Dentro do singup.component.ts foi adicionado essa validação,
 ela irá validar se o userName está igual ao password, apenas para mostrar como criar as proprias
 validações de formulários, chamando um método.
 no username-password.validator.ts é possível verificar a classe da validação, é diferente das demais 
+isso é uma crossfield validation
