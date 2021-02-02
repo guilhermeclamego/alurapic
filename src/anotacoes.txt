@@ -353,3 +353,19 @@ Exemplo para ativar o menu com tecla do teclado.
 <i tabindex="0" (keyup.space)="menu.toggle()"....>
 key.space é do Angular, para ao prossionar a barra de espaco, chamar a função menu.toggle()
 conforme no header.component.html
+
+Anotação 44:
+Criação do proprio errorHandler, pois existe o padrão do Angular, porém fica em runtime, apenas no navegador
+os erros, dificultando a vida do desenvolvedor. Assim nessa aplicação foi criado o proprior log de erro
+as regras estão dentro da pasta global-error-handler. 
+Observação importante: no errors.module.ts é onde é colocado para não utilizar o handlerError padrão do 
+angular, mas sim, o que foi criado. 
+e para isso foi criado um providers dentro do erros.module.ts
+ providers: [
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHander
+    }
+  ]
+  fazendo um de-para, ou seja, quando ativar o ErrorHandler, não usará mais o padrão do Angular, 
+  mas sim o GlobalErrorHandler criado no projeto
