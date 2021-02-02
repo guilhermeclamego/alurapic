@@ -347,3 +347,9 @@ Aplica a classe de acordo com estado do componente, isso é muito utilizado para
 como utilizado no menu da aplicação. 
 No caso o isShown é um boolean que está sendo controlado pelo menu.component.ts, conforme o método. 
 (click)="toggle()"
+
+Anotação 43:
+Exemplo para ativar o menu com tecla do teclado. 
+<i tabindex="0" (keyup.space)="menu.toggle()"....>
+key.space é do Angular, para ao prossionar a barra de espaco, chamar a função menu.toggle()
+conforme no header.component.html
