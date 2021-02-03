@@ -14,7 +14,15 @@ export class AuthGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
         if(!this.userService.isLogged()){
-            this.router.navigate(['']);
+            this.router.navigate(
+                [''],
+                {
+                    queryParams: {
+                        fromUrl: state.url 
+                    //assim, ao usuario acessar sem estiver logado e pedir para logar, já irá direto para url da tentativa
+                    }
+                }
+            );
             return false
         }
         return true

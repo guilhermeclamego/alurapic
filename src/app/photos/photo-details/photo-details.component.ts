@@ -38,7 +38,8 @@ export class PhotoDetailsComponent implements OnInit {
             .removePhoto(this.photoId)
             .subscribe(() => {
                     this.alertService.success('Photo Removed', true);
-                    this.router.navigate(['/user', this.userService.getUserName()])
+//replaceUrl: true, para destruir do histórico após remover a foto, assim não voltaram para uma página vazia.
+                    this.router.navigate(['/user', this.userService.getUserName()], { replaceUrl: true })
                 },
                 err => {
                     console.log(err);
